@@ -1,12 +1,12 @@
 const express = require('express');
 
-const GoodsController = require('./GoodsController');
-const GoodsMiddleware = require('./GoodsMiddleware');
+const ProductsController = require('./ProductsController');
+const ProductsMiddleware = require('./ProductsMiddleware');
 
-class GoodsRouter {
+class ProductsRouter {
   constructor({
-    controller = new GoodsController(),
-    middleware = new GoodsMiddleware(),
+    controller = new ProductsController(),
+    middleware = new ProductsMiddleware(),
     router = express.Router(),
   }) {
     this.controller = controller;
@@ -23,4 +23,4 @@ class GoodsRouter {
   }
 }
 
-module.exports = GoodsRouter;
+module.exports = ProductsRouter;
